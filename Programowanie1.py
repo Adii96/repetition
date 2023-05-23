@@ -236,3 +236,31 @@ def check_palindrome(text):
 
 print(check_palindrome('Anna'))
 print(check_palindrome('Adrian'))
+
+def phone(number):
+    lista = [123, 234, 555, 678, 985, 1235]
+    if number in lista:
+        return number
+        
+    else:
+        raise Exception('Nie ma takiego numeru')
+        
+        
+        
+print(phone(123))
+print(phone(555))
+
+
+# zadania dom dizeń 3
+import random
+
+def random_average(n):
+    lista = []
+    for i in range(n):
+        liczny = random.randint(1,100)
+        lista.append(liczny)
+    print(lista)
+    return sum(lista)/len(lista)
+
+print(random_average(8))
+print(random_average(5))
