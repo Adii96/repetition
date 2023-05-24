@@ -264,3 +264,41 @@ def random_average(n):
 
 print(random_average(8))
 print(random_average(5))
+
+def div():
+    while True:
+        try:
+            a = int(input('Podaj liczbę: '))
+            b = int(input('Podaj drugą liczbę: '))
+            division = a/b
+            break
+        except ValueError:
+            print('To nie jest liczba. Podaj liczbe: ')
+        except ZeroDivisionError:
+            print('Nie wolno dzielic przez zero !')
+    return division
+# print(div())
+
+def validate_pesel(pesel):
+    a = int(pesel[0]) * 1
+    b = int(pesel[1]) * 3
+    c = int(pesel[2]) * 7
+    d = int(pesel[3]) * 9
+    e = int(pesel[4]) * 1
+    f = int(pesel[5]) * 3
+    g = int(pesel[6]) * 7
+    h = int(pesel[7]) * 9
+    i = int(pesel[8]) * 1
+    j = int(pesel[9]) * 3
+    suma = a + b + c + d + e + f + g + h + i + j 
+    dzielenie = suma % 10
+    odjmowanie = 10 - dzielenie
+    if odjmowanie == int(pesel[10]):
+        return True
+    else:
+        return False
+print(validate_pesel('44051401358'))
+print(validate_pesel('44051401359'))
+    
+    
+    
